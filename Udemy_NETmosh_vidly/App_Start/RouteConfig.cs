@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿
 using System.Web.Mvc;
 using System.Web.Routing;
 
@@ -15,12 +12,13 @@ namespace Udemy_NETmosh_vidly
             
             routes.MapMvcAttributeRoutes();
 
-            routes.MapRoute(
+            //Voorbeeld Maprouting van eerdere versies .NET
+            /*routes.MapRoute(
                 "MoviesByReleaseDate",
                 "movies/released/{year}/{month}",
                 new { controller = "Movies", action ="MoviesByReleaseDate" },
                 new {year = @"\d{4}", month = @"\d{2}" });
-
+            */
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
